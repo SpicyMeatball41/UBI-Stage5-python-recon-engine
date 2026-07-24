@@ -1,0 +1,12 @@
+sequence,observed_at,purpose,target,host,port,protocol,attempt,scope_verdict,result,notes,runtime_id
+1,2026-07-23T17:43:13Z,DNS baseline,127.0.0.1:18467,127.0.0.1,18467,dns,1,approved,literal IP (no query),127.0.0.1 is a literal IP; no DNS resolution was needed or performed,722f724819e9385d
+2,2026-07-23T17:43:13Z,capability enumeration,127.0.0.1:23390,127.0.0.1,23390,signal,1,approved,LINE 200,,722f724819e9385d
+3,2026-07-23T17:43:13Z,baseline discovery,127.0.0.1:18467,127.0.0.1,18467,http,1,approved,HTTP 200,,722f724819e9385d
+4,2026-07-23T17:43:13Z,robots.txt enumeration,127.0.0.1:18467,127.0.0.1,18467,http,1,approved,HTTP 200,,722f724819e9385d
+5,2026-07-23T17:43:13Z,route discovery,127.0.0.1:23390,127.0.0.1,23390,signal,1,approved,LINE 200,,722f724819e9385d
+6,2026-07-23T17:43:13Z,vhost baseline,127.0.0.1:18467,127.0.0.1,18467,http,1,approved,HTTP 200,,722f724819e9385d
+7,2026-07-23T17:43:13Z,vhost robots.txt,127.0.0.1:18467,127.0.0.1,18467,http,1,approved,HTTP 200,,722f724819e9385d
+8,2026-07-23T17:43:13Z,TLS/SNI availability probe,127.0.0.1:18467,127.0.0.1,18467,tls,1,approved,no TLS (fallback: HTTP-only discovery),no TLS (handshake failed: [SSL: RECORD_LAYER_FAILURE] record layer failure (_ssl.c:1033)),722f724819e9385d
+9,2026-07-23T17:43:20Z,nmap version scan,127.0.0.1:18467,127.0.0.1,18467,nmap,1,approved,nmap exit 0,,722f724819e9385d
+10,2026-07-23T17:43:20Z,foothold: read credentials,127.0.0.1:18467,127.0.0.1,18467,http,1,approved,HTTP 200,,722f724819e9385d
+11,2026-07-23T17:43:20Z,foothold: authorized flag retrieval,127.0.0.1:18467,127.0.0.1,18467,http,1,approved,HTTP 200,,722f724819e9385d

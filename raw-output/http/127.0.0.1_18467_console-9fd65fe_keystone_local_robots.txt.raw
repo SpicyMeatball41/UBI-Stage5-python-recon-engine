@@ -1,0 +1,14 @@
+GET /robots.txt HTTP/1.1
+User-Agent: recon-engine/http-discovery
+Host: console-9fd65fe.keystone.local
+
+HTTP/1.1 200 OK
+Server: TransitGateway/2.4 
+Date: Thu, 23 Jul 2026 17:43:13 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 61
+X-Runtime-Profile: P6
+
+User-agent: *
+Disallow: /ops-diagnostics
+Disallow: /user.txt

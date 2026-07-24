@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Jul 23 11:43:13 2026 as: /usr/lib/nmap/nmap -Pn -p 18467 -sV -&#45;version-intensity 2 -oX - 127.0.0.1 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -Pn -p 18467 -sV -&#45;version-intensity 2 -oX - 127.0.0.1" start="1784828593" startstr="Thu Jul 23 11:43:13 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="18467"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1784828593" endtime="1784828600"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="localhost" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="18467"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="unknown" servicefp="SF-Port18467-TCP:V=7.98%I=2%D=7/23%Time=6A6252B8%P=x86_64-pc-linux-gnu%r(GetRequest,D7,&quot;HTTP/1\.0\x20200\x20OK\r\nServer:\x20TransitGateway/2\.4\x20\r\nDate:\x20Thu,\x2023\x20Jul\x202026\x2017:43:20\x20GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x2047\r\nX-Runtime-Profile:\x20P6\r\n\r\nTransit\x20edge\x20online\.\x20Route\x20is\x20not\x20provisioned\.\n&quot;)%r(SSLSessionReq,1E8,&quot;&lt;!DOCTYPE\x20HTML&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n\x20\x20\x20\x20&lt;head&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;meta\x20charset=\&quot;utf-8\&quot;&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;title&gt;Error\x20response&lt;/title&gt;\n\x20\x20\x20\x20&lt;/head&gt;\n\x20\x20\x20\x20&lt;body&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;h1&gt;Error\x20response&lt;/h1&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Error\x20code:\x20400&lt;/p&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Message:\x20Bad\x20request\x20syntax\x20\(&apos;\\x16\\x03\\x00\\x00S\\x01\\x00\\x00O\\x03\\x00\?G\xc3\x97\xc3\xb7\xc2\xba,\xc3\xae\xc3\xaa\xc2\xb2`~\xc3\xb3\\x00\xc3\xbd\\x82{\xc2\xb9\xc3\x95\\x96\xc3\x88w\\x9b\xc3\xa6\xc3\x84\xc3\x9b&amp;lt;=\xc3\x9bo\xc3\xaf\\x10n\\x00\\x00\(\\x00\\x16\\x00\\x13\\x00&apos;\)\.&lt;/p&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Error\x20code\x20explanation:\x20400\x20-\x20Bad\x20request\x20syntax\x20or\x20unsupported\x20method\.&lt;/p&gt;\n\x20\x20\x20\x20&lt;/body&gt;\n&lt;/html&gt;\n&quot;)%r(TLSSessionReq,16D,&quot;&lt;!DOCTYPE\x20HTML&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n\x20\x20\x20\x20&lt;head&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;meta\x20charset=\&quot;utf-8\&quot;&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;title&gt;Error\x20response&lt;/title&gt;\n\x20\x20\x20\x20&lt;/head&gt;\n\x20\x20\x20\x20&lt;body&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;h1&gt;Error\x20response&lt;/h1&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Error\x20code:\x20400&lt;/p&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Message:\x20Bad\x20request\x20version\x20\(&apos;\\x00/\\x00&apos;\)\.&lt;/p&gt;\n\x20\x20\x20\x20\x20\x20\x20\x20&lt;p&gt;Error\x20code\x20explanation:\x20400\x20-\x20Bad\x20request\x20syntax\x20or\x20unsupported\x20method\.&lt;/p&gt;\n\x20\x20\x20\x20&lt;/body&gt;\n&lt;/html&gt;\n&quot;);" method="table" conf="3"/></port>
+</ports>
+<times srtt="94" rttvar="5000" to="100000"/>
+</host>
+<runstats><finished time="1784828600" timestr="Thu Jul 23 11:43:20 2026" summary="Nmap done at Thu Jul 23 11:43:20 2026; 1 IP address (1 host up) scanned in 6.33 seconds" elapsed="6.33" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

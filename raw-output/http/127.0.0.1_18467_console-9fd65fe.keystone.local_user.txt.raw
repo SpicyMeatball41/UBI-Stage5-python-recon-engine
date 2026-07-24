@@ -1,0 +1,14 @@
+GET /user.txt HTTP/1.1
+Host: console-9fd65fe.keystone.local
+User-Agent: recon-engine/foothold
+Authorization: Basic cmV2aWV3ZXI5NzpXUnVKVkJnaXlqUm9aeEFRdFRHMQ==
+X-Route-Key: 058188d017e0d4a6
+
+HTTP/1.1 200 OK
+Server: TransitGateway/2.4 
+Date: Thu, 23 Jul 2026 17:43:20 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 35
+X-Runtime-Profile: P6
+
+UBI-EH-A1-35C4A1DC05CB059BFB870348

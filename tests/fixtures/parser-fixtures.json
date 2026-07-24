@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "interface": "recon-engine-fixture-v1",
+  "fixtures": [
+    { "id": "PARSE-01", "kind": "nmap_xml", "input": "<host><address addr='192.0.2.10'/><ports><port protocol='tcp' portid='8443'><state state='open'/><service name='https'/></port></ports></host>", "expected": { "host": "192.0.2.10", "port": 8443, "transport": "tcp", "service": "https", "state": "open" } },
+    { "id": "PARSE-02", "kind": "naabu_json", "input": { "host": "target.invalid", "ip": "192.0.2.11", "port": 2222, "protocol": "tcp" }, "expected": { "host": "target.invalid", "ip": "192.0.2.11", "port": 2222, "transport": "tcp" } },
+    { "id": "PARSE-03", "kind": "httpx_json", "input": { "url": "https://ops.target.invalid:8443", "status_code": 401, "title": "Operations", "tech": ["nginx"] }, "expected": { "scheme": "https", "host": "ops.target.invalid", "port": 8443, "status": 401 } },
+    { "id": "PARSE-04", "kind": "line", "input": "192.0.2.12:8022 ssh OpenSSH_9.2", "expected": { "ip": "192.0.2.12", "port": 8022, "service": "ssh", "product": "OpenSSH_9.2" } },
+    { "id": "PARSE-05", "kind": "malformed_json", "input": "{host:broken", "expected_error": "MALFORMED_TOOL_OUTPUT" },
+    { "id": "PARSE-06", "kind": "missing_port", "input": { "host": "target.invalid", "protocol": "tcp" }, "expected_error": "REQUIRED_FIELD_MISSING" },
+    { "id": "SCOPE-01", "kind": "cidr", "scope": ["192.0.2.0/28"], "candidate": "192.0.2.14", "expected": "allow" },
+    { "id": "SCOPE-02", "kind": "cidr", "scope": ["192.0.2.0/28"], "candidate": "192.0.2.16", "expected": "deny" },
+    { "id": "SCOPE-03", "kind": "hostname", "scope": ["target.invalid"], "candidate": "decoy.invalid", "expected": "deny" },
+    { "id": "SCOPE-04", "kind": "port", "scope": ["tcp/1-9000"], "candidate": "tcp/9443", "expected": "deny" },
+    { "id": "WILDCARD-01", "kind": "dns", "random_responses": ["192.0.2.40", "192.0.2.40", "192.0.2.40"], "candidate_response": "192.0.2.40", "expected": "suppress" },
+    { "id": "WILDCARD-02", "kind": "dns", "random_responses": ["192.0.2.40", "192.0.2.40", "192.0.2.40"], "candidate_response": "192.0.2.41", "expected": "retain" },
+    { "id": "WILDCARD-03", "kind": "vhost", "baseline": { "status": 200, "bytes": 812, "body_hash": "aaa111" }, "candidate": { "status": 200, "bytes": 812, "body_hash": "aaa111" }, "expected": "suppress" },
+    { "id": "WILDCARD-04", "kind": "vhost", "baseline": { "status": 200, "bytes": 812, "body_hash": "aaa111" }, "candidate": { "status": 401, "bytes": 1240, "body_hash": "bbb222" }, "expected": "retain" },
+    { "id": "RESUME-01", "kind": "checkpoint", "completed": ["dns", "probe"], "pending": ["ports", "fingerprint"], "expected_next": "ports" },
+    { "id": "RESUME-02", "kind": "checkpoint", "completed": ["dns", "probe", "ports", "fingerprint"], "pending": [], "expected_next": null },
+    { "id": "DEDUPE-01", "kind": "records", "input_ids": ["host:443:tcp", "host:443:tcp"], "expected_count": 1 },
+    { "id": "DEDUPE-02", "kind": "records", "input_ids": ["host:443:tcp", "host:443:udp"], "expected_count": 2 },
+    { "id": "FAILURE-01", "kind": "tool_exit", "tool": "nmap", "exit_code": 127, "fallback_available": true, "expected": "fallback" },
+    { "id": "FAILURE-02", "kind": "tool_exit", "tool": "required-parser", "exit_code": 2, "fallback_available": false, "expected": "nonzero_exit" }
+  ]
+}

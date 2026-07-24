@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Recon Engine Discovery Report</title>
+<style>
+  body { font-family: -apple-system, sans-serif; margin: 2rem; color: #1a1a1a; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ccc; padding: 0.4rem 0.6rem; text-align: left; font-size: 0.9rem; }
+  th { background: #f2f2f2; }
+  tr:nth-child(even) { background: #fafafa; }
+  code { font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<h1>Recon Engine Discovery Report</h1>
+<p>11 normalized record(s). Generated from
+<code>normalized/assets.jsonl</code> only -- raw evidence under
+<code>raw/</code> is untouched by report generation.</p>
+<table>
+<thead>
+<tr>
+  <th>Observed at</th><th>Target</th><th>Protocol</th><th>Service</th>
+  <th>Notes</th><th>Status</th><th>Source file</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>2026-07-23T17:43:13Z</td><td>127.0.0.1:18467</td><td>dns</td><td>dns</td><td>127.0.0.1 is a literal IP; no DNS resolution was needed or performed</td><td></td><td><code></code></td></tr>
+<tr><td>2026-07-23T17:43:13Z</td><td>127.0.0.1:18467</td><td>http</td><td>http</td><td>baseline discovery</td><td>200</td><td><code>127.0.0.1_18467_default_root.raw</code></td></tr>
+<tr><td>2026-07-23T17:43:13Z</td><td>127.0.0.1:18467</td><td>http</td><td>http</td><td>robots.txt enumeration</td><td>200</td><td><code>127.0.0.1_18467_default_robots.txt.raw</code></td></tr>
+<tr><td>2026-07-23T17:43:13Z</td><td>127.0.0.1:23390</td><td>signal</td><td>signal</td><td>capability enumeration</td><td>200</td><td><code>127.0.0.1_23390_caps.raw</code></td></tr>
+<tr><td>2026-07-23T17:43:13Z</td><td>127.0.0.1:23390</td><td>signal</td><td>signal</td><td>route discovery</td><td>200</td><td><code>127.0.0.1_23390_route.raw</code></td></tr>
+<tr><td>2026-07-23T17:43:13Z</td><td>127.0.0.1:18467</td><td>http</td><td>http</td><td>vhost baseline</td><td>200</td><td><code>127.0.0.1_18467_console-9fd65fe_keystone_local_root.raw</code></td></tr>
+<tr><td>2026-07-23T17:43:13Z</td><td>127.0.0.1:18467</td><td>http</td><td>http</td><td>vhost robots.txt</td><td>200</td><td><code>127.0.0.1_18467_console-9fd65fe_keystone_local_robots.txt.raw</code></td></tr>
+<tr><td>2026-07-23T17:43:13Z</td><td>127.0.0.1:18467</td><td>tls</td><td>tls</td><td>no TLS (handshake failed: [SSL: RECORD_LAYER_FAILURE] record layer failure (_ssl.c:1033))</td><td>False</td><td><code>127.0.0.1_18467_tls.raw</code></td></tr>
+<tr><td>2026-07-23T17:43:13Z</td><td>127.0.0.1:18467</td><td>nmap</td><td>unknown</td><td>nmap -sV enrichment (exit 0)</td><td></td><td><code>127.0.0.1_18467_nmap.xml</code></td></tr>
+<tr><td>2026-07-23T17:43:20Z</td><td>127.0.0.1:18467</td><td>http</td><td>http</td><td>foothold: read credentials</td><td>200</td><td><code>127.0.0.1_18467_console-9fd65fe.keystone.local_ops-diagnostics.raw</code></td></tr>
+<tr><td>2026-07-23T17:43:20Z</td><td>127.0.0.1:18467</td><td>http</td><td>http</td><td>foothold: authorized flag retrieval</td><td>200</td><td><code>127.0.0.1_18467_console-9fd65fe.keystone.local_user.txt.raw</code></td></tr>
+</tbody>
+</table>
+
+
+</body></html>

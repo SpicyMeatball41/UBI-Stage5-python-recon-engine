@@ -1,0 +1,2 @@
+host=127.0.0.1 port=18467
+no TLS (handshake failed: [SSL: RECORD_LAYER_FAILURE] record layer failure (_ssl.c:1033))

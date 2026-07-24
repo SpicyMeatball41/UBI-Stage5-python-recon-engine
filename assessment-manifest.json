@@ -1,0 +1,30 @@
+{
+  "foothold": {
+    "flag": "UBI-EH-A1-35C4A1DC05CB059BFB870348",
+    "ops_diagnostics_record": "127.0.0.1_18467_console-9fd65fe.keystone.local_ops-diagnostics.raw",
+    "route_key": "058188d017e0d4a6",
+    "success": true,
+    "user_txt_record": "127.0.0.1_18467_console-9fd65fe.keystone.local_user.txt.raw",
+    "username": "reviewer97",
+    "vhost": "console-9fd65fe.keystone.local"
+  },
+  "normalized_result_hash": "bb740e490514bd5682d87aa95f53c9c684b614c1a5ef7d329dc9292577dc5c6b",
+  "observation_performed": true,
+  "phase1_validation": {
+    "assignment_file": "/home/ubi-stage5-eh/lab-runtime/assignment.json",
+    "evidence_dir": "/home/ubi-stage5-eh/recon-engine/evidence/722f724819e9385d",
+    "output_dir": "/home/ubi-stage5-eh/recon-engine/run",
+    "requested_rate": 25,
+    "resolved_address": "127.0.0.1",
+    "scope_file": "/home/ubi-stage5-eh/lab-runtime/scope.csv",
+    "target": "127.0.0.1"
+  },
+  "reconciliation": {
+    "engine_approved_with_result": 0,
+    "engine_denied": 0,
+    "notes": "0 engine attempt(s) reached an authorized service and got a response in this run; target independently logged 0 new request(s) since this run started; 0 attempt(s) were denied before any packet was sent.",
+    "reconciled": true,
+    "target_entries": 0
+  },
+  "written_at": "2026-07-23T17:46:14Z"
+}

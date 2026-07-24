@@ -1,0 +1,3 @@
+BANNER: RLY/2 READY profile=dynamic
+> CAPS
+< commands=CAPS,ROUTE,QUIT; framing=line; auth=none
