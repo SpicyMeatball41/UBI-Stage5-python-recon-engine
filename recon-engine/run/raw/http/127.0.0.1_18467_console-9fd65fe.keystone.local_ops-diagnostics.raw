@@ -1,0 +1,12 @@
+GET /ops-diagnostics HTTP/1.1
+Host: console-9fd65fe.keystone.local
+User-Agent: recon-engine/foothold
+
+HTTP/1.1 200 OK
+Server: TransitGateway/2.4 
+Date: Thu, 23 Jul 2026 21:13:12 GMT
+Content-Type: application/json
+Content-Length: 178
+X-Runtime-Profile: P6
+
+{"note": "route proof is emitted by the signal service", "signal_service": 23390, "status": "degraded", "support_password": "jnWLdMXmpCSqWe0JMx0u", "support_user": "reviewer97"}

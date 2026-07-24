@@ -1,0 +1,11 @@
+GET / HTTP/1.1
+User-Agent: recon-engine/http-discovery
+
+HTTP/1.1 200 OK
+Server: TransitGateway/2.4 
+Date: Thu, 23 Jul 2026 21:13:12 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 47
+X-Runtime-Profile: P6
+
+Transit edge online. Route is not provisioned.

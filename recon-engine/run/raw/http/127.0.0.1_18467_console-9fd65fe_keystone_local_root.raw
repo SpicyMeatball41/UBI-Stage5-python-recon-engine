@@ -1,0 +1,12 @@
+GET / HTTP/1.1
+User-Agent: recon-engine/http-discovery
+Host: console-9fd65fe.keystone.local
+
+HTTP/1.1 200 OK
+Server: TransitGateway/2.4 
+Date: Thu, 23 Jul 2026 21:13:12 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 56
+X-Runtime-Profile: P6
+
+<title>Relay Operations</title><h1>Relay Operations</h1>

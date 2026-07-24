@@ -1,0 +1,111 @@
+{
+  "phase1_validation": {
+    "target": "127.0.0.1",
+    "resolved_address": "127.0.0.1",
+    "scope_file": "/home/ubi-stage5-eh/lab-runtime/scope.csv",
+    "assignment_file": "/home/ubi-stage5-eh/lab-runtime/assignment.json",
+    "evidence_dir": "/home/ubi-stage5-eh/submission/recon-engine/evidence/2a584d40d15cc701",
+    "output_dir": "/home/ubi-stage5-eh/submission/recon-engine/run",
+    "requested_rate": 25
+  },
+  "phase2_observation": {
+    "targets": [
+      {
+        "host": "127.0.0.1",
+        "port": 18467,
+        "note": "HTTP discovery target"
+      },
+      {
+        "host": "127.0.0.1",
+        "port": 23390,
+        "note": "line-protocol discovery target"
+      }
+    ],
+    "results": {
+      "dns:127.0.0.1": {
+        "host": "127.0.0.1",
+        "port": 18467,
+        "protocol": "dns",
+        "records_written": 0,
+        "records_total": 1,
+        "normalized_file": "normalized/assets.jsonl",
+        "raw_dir": null
+      },
+      "127.0.0.1:23390": {
+        "host": "127.0.0.1",
+        "port": 23390,
+        "protocol": "signal",
+        "commands_attempted": 2,
+        "records_written": 2,
+        "records_total": 2,
+        "normalized_file": "normalized/assets.jsonl",
+        "raw_dir": "raw/signal"
+      },
+      "127.0.0.1:18467": {
+        "host": "127.0.0.1",
+        "port": 18467,
+        "protocol": "http",
+        "probes_attempted": 2,
+        "records_written": 2,
+        "records_total": 2,
+        "normalized_file": "normalized/assets.jsonl",
+        "raw_dir": "raw/http"
+      },
+      "127.0.0.1:18467:vhost:console-9fd65fe.keystone.local": {
+        "host": "127.0.0.1",
+        "port": 18467,
+        "protocol": "http",
+        "probes_attempted": 2,
+        "records_written": 2,
+        "records_total": 2,
+        "normalized_file": "normalized/assets.jsonl",
+        "raw_dir": "raw/http"
+      },
+      "nmap:127.0.0.1:18467": {
+        "host": "127.0.0.1",
+        "port": 18467,
+        "protocol": "nmap",
+        "records_written": 0,
+        "records_total": 1,
+        "normalized_file": "normalized/assets.jsonl",
+        "raw_dir": "raw/nmap"
+      },
+      "foothold:127.0.0.1:18467": {
+        "vhost": "console-9fd65fe.keystone.local",
+        "route_key": "77e35fd97d40ab62",
+        "username": "reviewer97",
+        "flag": "UBI-EH-A1-92C52173E0D33A6BE56F402A",
+        "success": true,
+        "ops_diagnostics_record": "127.0.0.1_18467_console-9fd65fe.keystone.local_ops-diagnostics.raw",
+        "user_txt_record": "127.0.0.1_18467_console-9fd65fe.keystone.local_user.txt.raw"
+      }
+    },
+    "errors": {},
+    "tool_fallbacks": {},
+    "ledger_path": "/home/ubi-stage5-eh/submission/recon-engine/run/request-ledger.jsonl",
+    "checkpoint_path": "/home/ubi-stage5-eh/submission/recon-engine/run/checkpoint.json",
+    "vhost_discovered": "console-9fd65fe.keystone.local",
+    "foothold": {
+      "vhost": "console-9fd65fe.keystone.local",
+      "route_key": "77e35fd97d40ab62",
+      "username": "reviewer97",
+      "flag": "UBI-EH-A1-92C52173E0D33A6BE56F402A",
+      "success": true,
+      "ops_diagnostics_record": "127.0.0.1_18467_console-9fd65fe.keystone.local_ops-diagnostics.raw",
+      "user_txt_record": "127.0.0.1_18467_console-9fd65fe.keystone.local_user.txt.raw"
+    }
+  },
+  "observation_performed": true,
+  "reconciliation": {
+    "engine_approved_with_result": 8,
+    "engine_denied": 0,
+    "target_entries": 8,
+    "reconciled": true,
+    "notes": "8 engine attempt(s) reached an authorized service and got a response in this run; target independently logged 8 new request(s) since this run started; 0 attempt(s) were denied before any packet was sent."
+  },
+  "engine_ledger": "/home/ubi-stage5-eh/submission/recon-engine/run/request-ledger.jsonl",
+  "target_ledger": "/home/ubi-stage5-eh/lab-runtime/target-request-ledger.jsonl",
+  "report_path": "/home/ubi-stage5-eh/submission/recon-engine/run/report.html",
+  "normalized_result_hash": "db732ae8c40b7fb07d5bb3f666d66d5ac1cab9804b96d0aea86f6cf8564c78e6",
+  "written_at": "2026-07-23T21:13:12Z"
+}

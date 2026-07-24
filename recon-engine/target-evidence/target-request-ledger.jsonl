@@ -1,0 +1,9 @@
+{"method": "GET", "observed_at": "2026-07-23T17:43:13.755626Z", "peer": "127.0.0.1", "resource": "/", "result": 200, "sequence": 1, "service": "http"}
+{"method": "CAPS", "observed_at": "2026-07-23T17:43:13.755911Z", "peer": "127.0.0.1", "resource": "line", "result": 200, "sequence": 2, "service": "signal"}
+{"method": "GET", "observed_at": "2026-07-23T17:43:13.757539Z", "peer": "127.0.0.1", "resource": "/robots.txt", "result": 200, "sequence": 3, "service": "http"}
+{"method": "ROUTE", "observed_at": "2026-07-23T17:43:13.758189Z", "peer": "127.0.0.1", "resource": "line", "result": 200, "sequence": 4, "service": "signal"}
+{"method": "GET", "observed_at": "2026-07-23T17:43:13.760490Z", "peer": "127.0.0.1", "resource": "/", "result": 200, "sequence": 5, "service": "http"}
+{"method": "GET", "observed_at": "2026-07-23T17:43:13.761762Z", "peer": "127.0.0.1", "resource": "/robots.txt", "result": 200, "sequence": 6, "service": "http"}
+{"method": "GET", "observed_at": "2026-07-23T17:43:20.076169Z", "peer": "127.0.0.1", "resource": "/", "result": 200, "sequence": 7, "service": "http"}
+{"method": "GET", "observed_at": "2026-07-23T17:43:20.129103Z", "peer": "127.0.0.1", "resource": "/ops-diagnostics", "result": 200, "sequence": 8, "service": "http"}
+{"method": "GET", "observed_at": "2026-07-23T17:43:20.130060Z", "peer": "127.0.0.1", "resource": "/user.txt", "result": 200, "sequence": 9, "service": "http"}

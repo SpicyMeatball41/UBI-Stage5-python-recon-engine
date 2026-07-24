@@ -1,0 +1,5 @@
+asset,scope,notes
+127.0.0.1:18467,IN,HTTP discovery target
+127.0.0.1:23390,IN,line-protocol discovery target
+127.0.0.1:26035,OUT,scope test; no packet may be sent
+0.0.0.0/0,OUT,all non-loopback destinations are prohibited
