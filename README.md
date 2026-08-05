@@ -23,3 +23,8 @@ cd recon-engine
 python3 -m unittest discover -s tests -v
 python3 -m recon_engine.cli --target 127.0.0.1 --scope <scope.csv> --output run --rate 25
 ```
+## What is this?
+
+This is a Python Reconnaissance Engine built from scratch. It is able to obtain the user.txt flag from an isolated web server.
+
+** Assisted using Claude (Anthropic) and Novari (my custom Python Offensive Security Artificial Intelligence Assistant), which were used for debugging and implementation. **
